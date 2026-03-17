@@ -1,4 +1,6 @@
 
+Copy
+
 /**
  * CityByteHub — script.js
  * UI Logic, Animations, Form Validation, FAQ Accordion
@@ -475,5 +477,3 @@
   // Trigger glitch effect every ~8 seconds
   setInterval(startGlitch, 8000);
 })();
- 
- 
