@@ -1,1 +1,764 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <!-- SEO Title & Description -->
+  <title>CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar | Book Now</title>
+  <meta name="description" content="CityByteHub is Sikar's premium gaming zone & cyber cafe on Piprali Road. Gaming PCs, PS5, high-speed internet, printing & more. Open 7AM–9PM. Visit us today!" />
+  <meta name="keywords" content="gaming zone in Sikar, cyber cafe Sikar, PS5 gaming cafe Sikar, best gaming cafe Sikar, gaming PC on rent Sikar, LAN gaming zone Sikar, cyber cafe near me Sikar, internet cafe Piprali Road" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://citybytehub.in/" />
+ 
+  <!-- Open Graph (WhatsApp / Facebook sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar" />
+  <meta property="og:description" content="Sikar's premium gaming zone on Piprali Road. High-end PCs, PS5, fast internet, printing & more. Open 7AM–9PM." />
+  <meta property="og:url" content="https://citybytehub.in/" />
+  <meta property="og:image" content="https://citybytehub.in/assets/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+ 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar" />
+  <meta name="twitter:description" content="Sikar's premium gaming zone on Piprali Road. High-end PCs, PS5, fast internet." />
+  <meta name="twitter:image" content="https://citybytehub.in/assets/og-image.jpg" />
+ 
+  <!-- Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+ 
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+ 
+  <!-- Schema: LocalBusiness + EntertainmentBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "EntertainmentBusiness"],
+    "name": "CityByteHub",
+    "description": "Premium Gaming Zone & Cyber Cafe in Sikar on Piprali Road",
+    "url": "https://citybytehub.in",
+    "email": "citybytehub@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Piprali Road",
+      "addressLocality": "Sikar",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Su 07:00-21:00",
+    "priceRange": "₹₹",
+    "servesCuisine": "Gaming & Internet Services"
+  }
+  </script>
+ 
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the timings of CityByteHub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are open every day from 7:00 AM to 9:00 PM, including weekends and holidays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is CityByteHub located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CityByteHub is located on Piprali Road, Sikar, Rajasthan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer student discounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We offer special student discount packages. Bring your student ID and ask our staff for the current student offer."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+ 
+  <!-- ========== PARTICLE BACKGROUND ========== -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+ 
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="CityByteHub Home">
+        <span class="logo-icon" aria-hidden="true">⬡</span>
+        <span class="logo-text">City<span class="logo-accent">Byte</span>Hub</span>
+      </a>
+ 
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#why-us" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+ 
+      <a href="#contact" class="btn btn-primary nav-cta" aria-label="Book a seat now">Book a Seat</a>
+ 
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+ 
+  <main>
+ 
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-badge">📍 Piprali Road, Sikar</div>
+        <h1 class="hero-title">
+          <span class="title-line">Level Up Your</span>
+          <span class="title-line accent-glow">Gaming Experience</span>
+        </h1>
+        <p class="hero-sub">Sikar's most premium gaming zone & cyber cafe. High-end PCs, PS5, blazing-fast internet — all under one roof.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <span class="btn-icon" aria-hidden="true">🎮</span> Book a Seat
+          </a>
+          <a href="#pricing" class="btn btn-outline btn-lg">
+            <span class="btn-icon" aria-hidden="true">💰</span> View Pricing
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-badge">✅ Open 7AM – 9PM</span>
+          <span class="trust-badge">✅ High-Speed Internet</span>
+          <span class="trust-badge">✅ AC Room</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-glow-circle"></div>
+        <div class="hero-monitor">
+          <div class="monitor-screen">
+            <div class="screen-content">
+              <div class="screen-line"></div>
+              <div class="screen-line short"></div>
+              <div class="screen-line"></div>
+              <div class="screen-dot-grid"></div>
+            </div>
+          </div>
+          <div class="monitor-stand"></div>
+          <div class="monitor-base"></div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== STATS BAR ========== -->
+    <section class="stats-bar" aria-label="Quick stats">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🖥️</span>
+          <span class="stat-text">High-End Gaming PCs</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🎮</span>
+          <span class="stat-text">PS5 Available</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">⚡</span>
+          <span class="stat-text">Blazing-Fast Internet</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">🕐</span>
+          <span class="stat-text">Open 7AM – 9PM Daily</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat-item">
+          <span class="stat-icon" aria-hidden="true">😊</span>
+          <span class="stat-text">200+ Happy Gamers</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="services section-pad" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">What We Offer</p>
+          <h2 class="section-title" id="services-heading">Our <span class="accent-glow">Services</span></h2>
+          <p class="section-sub">Everything you need — gaming, internet, printing & more, all at one place in Sikar.</p>
+        </div>
+ 
+        <div class="services-grid">
+ 
+          <article class="service-card" aria-label="Gaming PCs service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">🖥️</div>
+            <h3 class="service-name">Gaming PCs</h3>
+            <p class="service-desc">High-performance gaming rigs with the latest titles. Experience buttery-smooth gameplay on pro-grade hardware.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>Latest AAA Game Titles</li>
+              <li>High Refresh Rate Monitors</li>
+              <li>Mechanical Keyboards & Pro Mice</li>
+            </ul>
+            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
+          </article>
+ 
+          <article class="service-card" aria-label="PS5 Console Gaming service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">🎮</div>
+            <h3 class="service-name">PS5 Gaming</h3>
+            <p class="service-desc">Sony PlayStation 5 with latest game library. Play FIFA, God of War, Mortal Kombat & more on big screen.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>Latest PS5 Titles</li>
+              <li>Large Screen Display</li>
+              <li>Dual Controllers Available</li>
+            </ul>
+            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
+          </article>
+ 
+          <article class="service-card" aria-label="High-Speed Internet service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3 class="service-name">High-Speed Internet</h3>
+            <p class="service-desc">Lightning-fast broadband connection for browsing, downloads, video calls and all your online needs.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>High-Speed Broadband</li>
+              <li>Private Browsing Sessions</li>
+              <li>Video Call Friendly</li>
+            </ul>
+            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
+          </article>
+ 
+          <article class="service-card" aria-label="Printing and Scanning service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">🖨️</div>
+            <h3 class="service-name">Printing & Scanning</h3>
+            <p class="service-desc">Black & white and color printing, photocopying, and document scanning — quick and affordable.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>B&W & Color Printing</li>
+              <li>Document Scanning</li>
+              <li>Photocopy Service</li>
+            </ul>
+            <a href="#contact" class="btn btn-sm btn-outline">Get Quote →</a>
+          </article>
+ 
+          <article class="service-card" aria-label="Online Form Filling service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">📋</div>
+            <h3 class="service-name">Online Form Filling</h3>
+            <p class="service-desc">Government forms, job applications, college admissions, bank forms — we help you fill and submit correctly.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>Government Portals</li>
+              <li>College Admissions</li>
+              <li>Job Applications</li>
+            </ul>
+            <a href="#contact" class="btn btn-sm btn-outline">Ask Us →</a>
+          </article>
+ 
+          <article class="service-card" aria-label="Student and Group discounts">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="service-icon" aria-hidden="true">🎓</div>
+            <h3 class="service-name">Student Discounts</h3>
+            <p class="service-desc">Special rates for students! Bring your student ID and enjoy discounted gaming and internet packages.</p>
+            <ul class="service-features" aria-label="Features">
+              <li>Student ID Required</li>
+              <li>Group Booking Discounts</li>
+              <li>Hourly & Package Plans</li>
+            </ul>
+            <a href="#contact" class="btn btn-sm btn-outline">Know More →</a>
+          </article>
+ 
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== PRICING SECTION ========== -->
+    <section class="pricing section-pad" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Transparent Rates</p>
+          <h2 class="section-title" id="pricing-heading">Simple <span class="accent-glow">Pricing</span></h2>
+          <p class="section-sub">No hidden charges. Pay only for what you use. Student discounts available.</p>
+        </div>
+ 
+        <div class="pricing-grid">
+ 
+          <article class="price-card" aria-label="Gaming PC pricing">
+            <div class="price-icon" aria-hidden="true">🖥️</div>
+            <h3 class="price-name">Gaming PC</h3>
+            <div class="price-amount">
+              <span class="price-currency">₹</span>
+              <span class="price-number">Ask Us</span>
+              <span class="price-per">/hr</span>
+            </div>
+            <ul class="price-features" aria-label="Included features">
+              <li>✓ High-Performance Rig</li>
+              <li>✓ All Popular Games</li>
+              <li>✓ Headset Included</li>
+              <li>✓ Mechanical Keyboard</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Book Now</a>
+          </article>
+ 
+          <article class="price-card price-popular" aria-label="PS5 pricing — most popular">
+            <div class="popular-badge" aria-label="Most popular plan">⭐ Most Popular</div>
+            <div class="price-icon" aria-hidden="true">🎮</div>
+            <h3 class="price-name">PS5 Gaming</h3>
+            <div class="price-amount">
+              <span class="price-currency">₹</span>
+              <span class="price-number">Ask Us</span>
+              <span class="price-per">/hr</span>
+            </div>
+            <ul class="price-features" aria-label="Included features">
+              <li>✓ PlayStation 5 Console</li>
+              <li>✓ Big Screen Display</li>
+              <li>✓ Latest Game Library</li>
+              <li>✓ 2 Controllers</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block">Book Now</a>
+          </article>
+ 
+          <article class="price-card" aria-label="Internet browsing pricing">
+            <div class="price-icon" aria-hidden="true">🌐</div>
+            <h3 class="price-name">Internet / Browsing</h3>
+            <div class="price-amount">
+              <span class="price-currency">₹</span>
+              <span class="price-number">Ask Us</span>
+              <span class="price-per">/hr</span>
+            </div>
+            <ul class="price-features" aria-label="Included features">
+              <li>✓ High-Speed Broadband</li>
+              <li>✓ Private Session</li>
+              <li>✓ Print/Scan Add-on Available</li>
+              <li>✓ Form Filling Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Book Now</a>
+          </article>
+ 
+        </div>
+ 
+        <div class="pricing-note" role="note">
+          <span class="note-icon" aria-hidden="true">💡</span>
+          <p>Prices vary based on packages and duration. <strong>Student discounts</strong> available with valid ID. Contact us or visit for current offers!</p>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="why-us section-pad" id="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Why CityByteHub?</p>
+          <h2 class="section-title" id="why-heading">Sikar's <span class="accent-glow">Best</span> Gaming Zone</h2>
+          <p class="section-sub">We're not just another cyber cafe. We're a premium gaming experience built for serious players and everyday users.</p>
+        </div>
+ 
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">⚡</div>
+            <h3>Blazing Fast Internet</h3>
+            <p>High-speed broadband ensures zero lag during gaming, downloads or video calls.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">❄️</div>
+            <h3>AC Comfort</h3>
+            <p>Fully air-conditioned space so you game in comfort even on the hottest Rajasthan days.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🎯</div>
+            <h3>Pro Gaming Setup</h3>
+            <p>High-end PCs, mechanical keyboards, gaming mice, and high-refresh monitors for the ultimate experience.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">📍</div>
+            <h3>Prime Location</h3>
+            <p>Conveniently located on Piprali Road, Sikar — easy to reach from anywhere in the city.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🤝</div>
+            <h3>Friendly Staff</h3>
+            <p>Our team includes a dedicated tech expert and support staff — always ready to help you.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon" aria-hidden="true">🎓</div>
+            <h3>Student Friendly</h3>
+            <p>Special discounts for students. We understand the student budget and cater to it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== ABOUT / OUR STORY ========== -->
+    <section class="about section-pad" id="about" aria-labelledby="about-heading">
+      <div class="container about-container">
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-graphic">
+            <div class="ag-ring ag-ring-1"></div>
+            <div class="ag-ring ag-ring-2"></div>
+            <div class="ag-ring ag-ring-3"></div>
+            <div class="ag-core">CBH</div>
+          </div>
+        </div>
+        <div class="about-content">
+          <p class="section-tag">Our Story</p>
+          <h2 class="section-title" id="about-heading">Born in <span class="accent-glow">Sikar</span>, Built for Gamers</h2>
+          <p class="about-text">CityByteHub was founded by two passionate partners — one with deep technical expertise and the other handling operations — with a shared dream: to bring a truly premium gaming and internet experience to Sikar.</p>
+          <p class="about-text">Located on Piprali Road, we offer the best gaming hardware, fastest internet, and a welcoming environment for students, gamers, and professionals alike. Whether you're here to game, browse, print, or fill forms — we've got you covered.</p>
+          <div class="about-team">
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">👨‍💻</div>
+              <div class="team-info">
+                <h4>Technical Partner</h4>
+                <p>Hardware & Tech Support</p>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar" aria-hidden="true">👨‍💼</div>
+              <div class="team-info">
+                <h4>Operations Partner</h4>
+                <p>Customer Experience & Management</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-hours">
+            <h4>⏰ Opening Hours</h4>
+            <p>Monday – Sunday: <strong>7:00 AM – 9:00 PM</strong></p>
+            <p>Open on Holidays: <strong>Yes!</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials section-pad" id="testimonials" aria-labelledby="test-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">What Gamers Say</p>
+          <h2 class="section-title" id="test-heading">Real <span class="accent-glow">Reviews</span></h2>
+        </div>
+ 
+        <div class="testimonials-grid">
+          <article class="testimonial-card" aria-label="Review by Arjun S.">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="test-text">"Best gaming setup I've seen in Sikar. The PCs are super fast and the atmosphere is awesome. Totally worth it!"</p>
+            <div class="test-author">
+              <div class="author-avatar" aria-hidden="true">🧑</div>
+              <div>
+                <strong>Arjun S.</strong>
+                <span>Gamer, Sikar</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" aria-label="Review by Priya M.">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="test-text">"Came here for printing and ended up gaming for 2 hours! The staff is very helpful and the internet is super fast."</p>
+            <div class="test-author">
+              <div class="author-avatar" aria-hidden="true">👩</div>
+              <div>
+                <strong>Priya M.</strong>
+                <span>Student, Sikar</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card" aria-label="Review by Rahul K.">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="test-text">"PS5 gaming experience was insane. Played FIFA with my friends and it was the best evening. Will definitely come again!"</p>
+            <div class="test-author">
+              <div class="author-avatar" aria-hidden="true">🧑</div>
+              <div>
+                <strong>Rahul K.</strong>
+                <span>PS5 Gamer</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq section-pad" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-container">
+        <div class="section-header">
+          <p class="section-tag">Common Questions</p>
+          <h2 class="section-title" id="faq-heading">FAQ</h2>
+        </div>
+ 
+        <div class="faq-list" role="list">
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+              <span>What are your opening hours?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq1" hidden>
+              <p>We are open every day — Monday to Sunday — from <strong>7:00 AM to 9:00 PM</strong>, including holidays. Come anytime that suits you!</p>
+            </div>
+          </div>
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+              <span>Where exactly is CityByteHub located?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq2" hidden>
+              <p>We are located on <strong>Piprali Road, Sikar, Rajasthan</strong>. You can find us on Google Maps — just search "CityByteHub Sikar".</p>
+            </div>
+          </div>
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+              <span>Do you offer student discounts?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq3" hidden>
+              <p>Yes! We have special student-friendly pricing. Bring your valid student ID and ask our staff for the current student discount offer.</p>
+            </div>
+          </div>
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+              <span>Can I book a slot in advance?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq4" hidden>
+              <p>Yes! You can contact us via the form below, call us directly, or drop a message on WhatsApp to pre-book a slot — especially useful for PS5 gaming.</p>
+            </div>
+          </div>
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+              <span>What printing services do you offer?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq5" hidden>
+              <p>We offer black & white printing, color printing, photocopying, and document scanning. Perfect for students and professionals. Ask us for current rates per page.</p>
+            </div>
+          </div>
+ 
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+              <span>Do you help with online form filling?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq6" hidden>
+              <p>Absolutely! We assist with government portal registrations, college admissions, job applications, and all kinds of online form submissions. Our staff will guide you step-by-step.</p>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Get In Touch</p>
+          <h2 class="section-title" id="contact-heading">Visit or <span class="accent-glow">Contact Us</span></h2>
+          <p class="section-sub">Have a question, want to book a session, or just drop by? We'd love to hear from you!</p>
+        </div>
+ 
+        <div class="contact-grid">
+ 
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">📍</div>
+              <div>
+                <h4>Location</h4>
+                <p>Piprali Road, Sikar, Rajasthan</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">📧</div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:citybytehub@gmail.com">citybytehub@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">⏰</div>
+              <div>
+                <h4>Timings</h4>
+                <p>Mon – Sun: 7:00 AM – 9:00 PM</p>
+              </div>
+            </div>
+ 
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20CityByteHub%2C%20I%20want%20to%20book%20a%20session!" 
+               class="btn btn-whatsapp" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Chat on WhatsApp">
+              <span aria-hidden="true">💬</span> Chat on WhatsApp
+            </a>
+ 
+            <!-- Google Maps placeholder -->
+            <div class="map-placeholder" role="img" aria-label="Map location of CityByteHub on Piprali Road Sikar">
+              <div class="map-inner">
+                <div class="map-pin" aria-hidden="true">📍</div>
+                <p>CityByteHub</p>
+                <p class="map-addr">Piprali Road, Sikar</p>
+                <a href="https://maps.google.com/?q=CityByteHub+Sikar+Piprali+Road" 
+                   class="btn btn-sm btn-outline" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Open in Google Maps">
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Contact Form -->
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Contact and booking form">
+              <h3 class="form-title">Book a Session / Enquire</h3>
+ 
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" autocomplete="name" aria-required="true" />
+                <span class="field-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+ 
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required pattern="[6-9][0-9]{9}" autocomplete="tel" aria-required="true" />
+                <span class="field-error" id="phone-error" role="alert" aria-live="polite"></span>
+              </div>
+ 
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+                <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+ 
+              <div class="form-group">
+                <label for="service">Service Interested In *</label>
+                <select id="service" name="service" required aria-required="true">
+                  <option value="">-- Select a Service --</option>
+                  <option value="gaming-pc">Gaming PC</option>
+                  <option value="ps5">PS5 Gaming</option>
+                  <option value="internet">Internet / Browsing</option>
+                  <option value="printing">Printing & Scanning</option>
+                  <option value="form-filling">Online Form Filling</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="field-error" id="service-error" role="alert" aria-live="polite"></span>
+              </div>
+ 
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Any specific requirements or questions?" rows="4" aria-label="Message"></textarea>
+              </div>
+ 
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span class="btn-text">Send Enquiry</span>
+                <span class="btn-loading" hidden aria-hidden="true">Sending...</span>
+              </button>
+ 
+              <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
+                ✅ Thanks! We'll get back to you soon. Or visit us at Piprali Road, Sikar!
+              </div>
+ 
+              <!-- WARNING: Also validate all inputs on backend/server — never trust frontend validation alone -->
+            </form>
+          </div>
+ 
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo footer-logo" aria-label="CityByteHub home">
+          <span class="logo-icon" aria-hidden="true">⬡</span>
+          <span class="logo-text">City<span class="logo-accent">Byte</span>Hub</span>
+        </a>
+        <p class="footer-tagline">Sikar's Premium Gaming Zone & Cyber Cafe on Piprali Road.</p>
+        <p class="footer-hours">🕐 Open Daily: 7:00 AM – 9:00 PM</p>
+      </div>
+ 
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+ 
+      <div class="footer-services">
+        <h4>Services</h4>
+        <ul role="list">
+          <li>Gaming PCs</li>
+          <li>PS5 / Console Gaming</li>
+          <li>High-Speed Internet</li>
+          <li>Printing & Scanning</li>
+          <li>Online Form Filling</li>
+          <li>Student Discounts</li>
+        </ul>
+      </div>
+ 
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📍 Piprali Road, Sikar, Rajasthan</p>
+        <p>📧 <a href="mailto:citybytehub@gmail.com">citybytehub@gmail.com</a></p>
+        <p>🕐 7:00 AM – 9:00 PM Daily</p>
+        <div class="social-links" aria-label="Social media links">
+          <!-- Replace # with actual social URLs when available -->
+          <a href="#" class="social-btn" aria-label="Instagram" rel="noopener noreferrer" target="_blank">📸</a>
+          <a href="#" class="social-btn" aria-label="Facebook" rel="noopener noreferrer" target="_blank">📘</a>
+          <a href="#" class="social-btn" aria-label="YouTube" rel="noopener noreferrer" target="_blank">▶️</a>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+      <p>© 2025 CityByteHub, Sikar. All rights reserved. | Best Gaming Zone in Sikar | Cyber Cafe Piprali Road</p>
+      <div class="footer-legal">
+        <a href="#privacy">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="#terms">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+ 
+  <!-- ========== FLOATING BUTTONS ========== -->
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20CityByteHub%2C%20I%20want%20to%20book%20a%20session!" 
+     class="float-whatsapp" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    💬
+  </a>
+ 
+  <!-- Sticky Book Now (Mobile) -->
+  <a href="#contact" class="float-book-btn" aria-label="Book a seat now">
+    🎮 Book a Seat
+  </a>
+ 
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
