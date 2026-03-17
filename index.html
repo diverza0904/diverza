@@ -1,764 +1,1347 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
-  <!-- SEO Title & Description -->
-  <title>CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar | Book Now</title>
-  <meta name="description" content="CityByteHub is Sikar's premium gaming zone & cyber cafe on Piprali Road. Gaming PCs, PS5, high-speed internet, printing & more. Open 7AM–9PM. Visit us today!" />
-  <meta name="keywords" content="gaming zone in Sikar, cyber cafe Sikar, PS5 gaming cafe Sikar, best gaming cafe Sikar, gaming PC on rent Sikar, LAN gaming zone Sikar, cyber cafe near me Sikar, internet cafe Piprali Road" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://citybytehub.in/" />
- 
-  <!-- Open Graph (WhatsApp / Facebook sharing) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar" />
-  <meta property="og:description" content="Sikar's premium gaming zone on Piprali Road. High-end PCs, PS5, fast internet, printing & more. Open 7AM–9PM." />
-  <meta property="og:url" content="https://citybytehub.in/" />
-  <meta property="og:image" content="https://citybytehub.in/assets/og-image.jpg" />
-  <meta property="og:locale" content="en_IN" />
- 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CityByteHub — Best Gaming Zone & Cyber Cafe in Sikar" />
-  <meta name="twitter:description" content="Sikar's premium gaming zone on Piprali Road. High-end PCs, PS5, fast internet." />
-  <meta name="twitter:image" content="https://citybytehub.in/assets/og-image.jpg" />
- 
-  <!-- Preload Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
- 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
- 
-  <!-- Schema: LocalBusiness + EntertainmentBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "EntertainmentBusiness"],
-    "name": "CityByteHub",
-    "description": "Premium Gaming Zone & Cyber Cafe in Sikar on Piprali Road",
-    "url": "https://citybytehub.in",
-    "email": "citybytehub@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Piprali Road",
-      "addressLocality": "Sikar",
-      "addressRegion": "Rajasthan",
-      "addressCountry": "IN"
-    },
-    "openingHours": "Mo-Su 07:00-21:00",
-    "priceRange": "₹₹",
-    "servesCuisine": "Gaming & Internet Services"
+/* ============================================================
+   CityByteHub — FINAL MASTER CSS (Sharp & Clean)
+   Sikar's Premium Gaming Zone & Cyber Cafe
+   Perfect Colors • Sharp UI • Best User Experience
+   ============================================================ */
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  /* Background - Perfect Dark Theme */
+  --bg-primary: #0c0c14;
+  --bg-secondary: #14141f;
+  --bg-card: #1a1a28;
+  --bg-card-alt: #222230;
+  --bg-nav: rgba(12, 12, 20, 0.98);
+  
+  /* Accent Colors - Vibrant & Sharp */
+  --accent-blue: #00f0ff;
+  --accent-green: #00ffaa;
+  --accent-purple: #8a2be2;
+  --accent-pink: #ff4d9e;
+  --accent-gold: #ffd966;
+  
+  /* Text Colors - Maximum Contrast */
+  --text-primary: #ffffff;
+  --text-secondary: #f0f0f0;
+  --text-muted: #b0b0c0;
+  --text-dark: #0c0c14;
+  
+  /* Borders & Effects */
+  --border-glow: rgba(0, 240, 255, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(0, 240, 255, 0.4);
+  --shadow-green: 0 0 20px rgba(0, 255, 170, 0.3);
+  --shadow-purple: 0 0 20px rgba(138, 43, 226, 0.4);
+  
+  /* Fonts */
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-alt: 'Exo 2', sans-serif;
+  
+  /* Dimensions */
+  --transition: 0.3s ease;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+}
+
+/* ========== RESET & BASE ========== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Sharp text for all headings */
+h1, h2, h3, h4, h5, h6, .btn, .nav-logo, .section-title, .price-name {
+  text-rendering: geometricPrecision;
+  letter-spacing: 0.5px;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  font-family: var(--font-alt);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-blue);
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.section-title .accent-glow {
+  color: var(--accent-blue);
+  text-shadow: 0 0 15px var(--accent-blue);
+  font-weight: 900;
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* ========== BUTTONS - PERFECT & SHARP ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: var(--text-dark);
+  border: 2px solid var(--accent-blue);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--accent-blue);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--accent-blue);
+  color: var(--text-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--text-dark);
+  border: 2px solid #25d366;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:hover {
+  background: transparent;
+  color: #25d366;
+  border-color: #25d366;
+  box-shadow: 0 0 25px #25d366;
+  transform: translateY(-3px);
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+.btn-sm {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ========== NAVBAR - CRYSTAL CLEAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--accent-blue);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: var(--accent-blue);
+  text-shadow: 0 0 15px var(--accent-blue);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--accent-blue);
+  letter-spacing: 1px;
+}
+
+.logo-accent {
+  color: var(--accent-blue);
+  font-weight: 900;
+  text-shadow: 0 0 12px var(--accent-blue);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-blue);
+  background: rgba(0, 240, 255, 0.1);
+  text-shadow: 0 0 8px var(--accent-blue);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--accent-blue);
+  transition: all var(--transition);
+  box-shadow: 0 0 8px var(--accent-blue);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  left: 1.2rem;
+  right: 1.2rem;
+}
+
+/* ========== HERO SECTION - POWERFUL ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.hero-content {
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0, 240, 255, 0.12);
+  border: 2px solid var(--accent-blue);
+  border-radius: 100px;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-glow);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent-green);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.title-line {
+  display: block;
+}
+
+.title-line.accent-glow {
+  color: var(--accent-blue);
+  text-shadow: 0 0 20px var(--accent-blue), 0 0 40px rgba(0, 240, 255, 0.3);
+  font-weight: 900;
+}
+
+.hero-sub {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  font-family: var(--font-alt);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trust-badge::before {
+  content: '✓';
+  color: var(--accent-green);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+/* ========== STATS BAR ========== */
+.stats-bar {
+  background: var(--bg-secondary);
+  border-top: 2px solid var(--accent-blue);
+  border-bottom: 2px solid var(--accent-blue);
+  padding: 1.25rem 0;
+}
+
+.stats-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-alt);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stat-icon {
+  color: var(--accent-blue);
+  font-size: 1.2rem;
+  text-shadow: 0 0 8px var(--accent-blue);
+}
+
+/* ========== SERVICES SECTION ========== */
+.services {
+  background: var(--bg-secondary);
+  padding: 5rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 2px solid rgba(0, 240, 255, 0.15);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-badge {
+  display: inline-block;
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--accent-blue);
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  color: var(--accent-blue);
+  text-shadow: 0 0 15px var(--accent-blue);
+}
+
+.service-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.service-features {
+  margin-bottom: 2rem;
+}
+
+.service-features li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-size: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ========== PRICING SECTION ========== */
+.pricing {
+  background: var(--bg-primary);
+  padding: 5rem 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.price-card {
+  background: var(--bg-card);
+  border: 2px solid rgba(0, 240, 255, 0.15);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.price-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.price-card.price-popular {
+  border-color: var(--accent-blue);
+  border-width: 3px;
+  box-shadow: var(--shadow-glow);
+  background: linear-gradient(145deg, #1a1a28, #222235);
+  transform: scale(1.02);
+}
+
+.price-card.price-popular:hover {
+  transform: scale(1.03) translateY(-6px);
+  box-shadow: 0 0 30px var(--accent-blue);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-blue);
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 2rem;
+  border-radius: 0 0 50px 50px;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-glow);
+  text-transform: uppercase;
+}
+
+.price-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+  text-shadow: 0 0 15px var(--accent-blue);
+}
+
+.price-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1.5rem 0;
+}
+
+.price-currency {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.price-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+.price-per {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.price-features {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.price-features li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-features li::before {
+  content: '✓';
+  color: var(--accent-green);
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+/* ========== PRINT RATES ========== */
+.print-rates {
+  background: var(--bg-card);
+  border: 2px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin: 3rem auto;
+  max-width: 1280px;
+}
+
+.print-rates-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.print-rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.print-rate-item {
+  background: var(--bg-card-alt);
+  border: 2px solid rgba(0, 240, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.print-rate-item:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.pr-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pr-price {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+/* ========== STUDENT BANNER ========== */
+.student-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 170, 0.08), rgba(0, 240, 255, 0.08));
+  border: 2px solid var(--accent-green);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin: 3rem auto;
+  max-width: 1280px;
+  box-shadow: var(--shadow-green);
+}
+
+.sb-icon {
+  font-size: 3.5rem;
+  color: var(--accent-green);
+  text-shadow: 0 0 20px var(--accent-green);
+  flex-shrink: 0;
+}
+
+.sb-text {
+  flex: 1;
+}
+
+.sb-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px var(--accent-green);
+}
+
+.sb-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========== TOURNAMENTS SECTION ========== */
+.tournaments {
+  background: var(--bg-secondary);
+  padding: 5rem 0;
+}
+
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tourn-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 2px solid rgba(255, 215, 0, 0.15);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tourn-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffaa00);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.tourn-card:hover {
+  border-color: #ffd700;
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.tourn-card:hover::before {
+  opacity: 1;
+}
+
+.tourn-game-icon {
+  font-size: 2.8rem;
+  color: #ffd700;
+  text-shadow: 0 0 15px #ffd700;
+  flex-shrink: 0;
+}
+
+.tourn-tag {
+  display: inline-block;
+  font-family: var(--font-alt);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #ffd700;
+  border-radius: 50px;
+  padding: 0.2rem 1rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tourn-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.tourn-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tourn-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tourn-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #ffd700;
+  border-radius: 50px;
+  padding: 0.2rem 0.8rem;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact {
+  background: var(--bg-primary);
+  padding: 5rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 2px solid rgba(0, 240, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all var(--transition);
+}
+
+.info-card:hover {
+  border-color: var(--accent-blue);
+  transform: translateX(5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  text-shadow: 0 0 10px var(--accent-blue);
+}
+
+.info-card h4 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-card p, .info-card a {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contact-form-wrap {
+  background: var(--bg-card);
+  border: 2px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.form-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-alt);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.2rem;
+  color: var(--text-primary);
+  font-family: var(--font-alt);
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-glow);
+  background: rgba(0, 240, 255, 0.05);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #08080f;
+  border-top: 3px solid var(--accent-blue);
+  padding-top: 4rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.footer-logo .logo-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+.footer-hours {
+  font-size: 0.9rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.footer h4 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links ul li,
+.footer-services ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links ul li a,
+.footer-services ul li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+
+.footer-links ul li a:hover,
+.footer-services ul li a:hover {
+  color: var(--accent-blue);
+  padding-left: 5px;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 240, 255, 0.1);
+  border: 2px solid var(--accent-blue);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--accent-blue);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: var(--accent-blue);
+  color: var(--text-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ========== FLOATING BUTTONS ========== */
+.float-whatsapp {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border: 3px solid var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  box-shadow: 0 0 25px #25d366;
+  z-index: 999;
+  transition: all var(--transition);
+  text-decoration: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-whatsapp:hover {
+  transform: scale(1.1);
+  background: var(--text-primary);
+  color: #25d366;
+  border-color: #25d366;
+  box-shadow: 0 0 35px #25d366;
+}
+
+.float-book-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-blue);
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: 3px solid var(--text-primary);
+  box-shadow: var(--shadow-glow);
+  z-index: 998;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition);
+  white-space: nowrap;
+  display: none;
+}
+
+.float-book-btn:hover {
+  background: var(--text-primary);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 30px var(--accent-blue);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
-  </script>
- 
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What are the timings of CityByteHub?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We are open every day from 7:00 AM to 9:00 PM, including weekends and holidays."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is CityByteHub located?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CityByteHub is located on Piprali Road, Sikar, Rajasthan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer student discounts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! We offer special student discount packages. Bring your student ID and ask our staff for the current student offer."
-        }
-      }
-    ]
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
-  </script>
-</head>
-<body>
- 
-  <!-- ========== PARTICLE BACKGROUND ========== -->
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
- 
-  <!-- ========== NAVIGATION ========== -->
-  <header class="navbar" id="navbar" role="banner">
-    <nav class="nav-container" aria-label="Main navigation">
-      <a href="#home" class="nav-logo" aria-label="CityByteHub Home">
-        <span class="logo-icon" aria-hidden="true">⬡</span>
-        <span class="logo-text">City<span class="logo-accent">Byte</span>Hub</span>
-      </a>
- 
-      <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="#why-us" class="nav-link">About</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
- 
-      <a href="#contact" class="btn btn-primary nav-cta" aria-label="Book a seat now">Book a Seat</a>
- 
-      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </header>
- 
-  <main>
- 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero" id="home" aria-label="Hero">
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="hero-badge">📍 Piprali Road, Sikar</div>
-        <h1 class="hero-title">
-          <span class="title-line">Level Up Your</span>
-          <span class="title-line accent-glow">Gaming Experience</span>
-        </h1>
-        <p class="hero-sub">Sikar's most premium gaming zone & cyber cafe. High-end PCs, PS5, blazing-fast internet — all under one roof.</p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary btn-lg">
-            <span class="btn-icon" aria-hidden="true">🎮</span> Book a Seat
-          </a>
-          <a href="#pricing" class="btn btn-outline btn-lg">
-            <span class="btn-icon" aria-hidden="true">💰</span> View Pricing
-          </a>
-        </div>
-        <div class="hero-trust">
-          <span class="trust-badge">✅ Open 7AM – 9PM</span>
-          <span class="trust-badge">✅ High-Speed Internet</span>
-          <span class="trust-badge">✅ AC Room</span>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-glow-circle"></div>
-        <div class="hero-monitor">
-          <div class="monitor-screen">
-            <div class="screen-content">
-              <div class="screen-line"></div>
-              <div class="screen-line short"></div>
-              <div class="screen-line"></div>
-              <div class="screen-dot-grid"></div>
-            </div>
-          </div>
-          <div class="monitor-stand"></div>
-          <div class="monitor-base"></div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== STATS BAR ========== -->
-    <section class="stats-bar" aria-label="Quick stats">
-      <div class="stats-container">
-        <div class="stat-item">
-          <span class="stat-icon" aria-hidden="true">🖥️</span>
-          <span class="stat-text">High-End Gaming PCs</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat-item">
-          <span class="stat-icon" aria-hidden="true">🎮</span>
-          <span class="stat-text">PS5 Available</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat-item">
-          <span class="stat-icon" aria-hidden="true">⚡</span>
-          <span class="stat-text">Blazing-Fast Internet</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat-item">
-          <span class="stat-icon" aria-hidden="true">🕐</span>
-          <span class="stat-text">Open 7AM – 9PM Daily</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat-item">
-          <span class="stat-icon" aria-hidden="true">😊</span>
-          <span class="stat-text">200+ Happy Gamers</span>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== SERVICES SECTION ========== -->
-    <section class="services section-pad" id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">What We Offer</p>
-          <h2 class="section-title" id="services-heading">Our <span class="accent-glow">Services</span></h2>
-          <p class="section-sub">Everything you need — gaming, internet, printing & more, all at one place in Sikar.</p>
-        </div>
- 
-        <div class="services-grid">
- 
-          <article class="service-card" aria-label="Gaming PCs service">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">🖥️</div>
-            <h3 class="service-name">Gaming PCs</h3>
-            <p class="service-desc">High-performance gaming rigs with the latest titles. Experience buttery-smooth gameplay on pro-grade hardware.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>Latest AAA Game Titles</li>
-              <li>High Refresh Rate Monitors</li>
-              <li>Mechanical Keyboards & Pro Mice</li>
-            </ul>
-            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
-          </article>
- 
-          <article class="service-card" aria-label="PS5 Console Gaming service">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">🎮</div>
-            <h3 class="service-name">PS5 Gaming</h3>
-            <p class="service-desc">Sony PlayStation 5 with latest game library. Play FIFA, God of War, Mortal Kombat & more on big screen.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>Latest PS5 Titles</li>
-              <li>Large Screen Display</li>
-              <li>Dual Controllers Available</li>
-            </ul>
-            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
-          </article>
- 
-          <article class="service-card" aria-label="High-Speed Internet service">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">⚡</div>
-            <h3 class="service-name">High-Speed Internet</h3>
-            <p class="service-desc">Lightning-fast broadband connection for browsing, downloads, video calls and all your online needs.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>High-Speed Broadband</li>
-              <li>Private Browsing Sessions</li>
-              <li>Video Call Friendly</li>
-            </ul>
-            <a href="#pricing" class="btn btn-sm btn-outline">View Pricing →</a>
-          </article>
- 
-          <article class="service-card" aria-label="Printing and Scanning service">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">🖨️</div>
-            <h3 class="service-name">Printing & Scanning</h3>
-            <p class="service-desc">Black & white and color printing, photocopying, and document scanning — quick and affordable.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>B&W & Color Printing</li>
-              <li>Document Scanning</li>
-              <li>Photocopy Service</li>
-            </ul>
-            <a href="#contact" class="btn btn-sm btn-outline">Get Quote →</a>
-          </article>
- 
-          <article class="service-card" aria-label="Online Form Filling service">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">📋</div>
-            <h3 class="service-name">Online Form Filling</h3>
-            <p class="service-desc">Government forms, job applications, college admissions, bank forms — we help you fill and submit correctly.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>Government Portals</li>
-              <li>College Admissions</li>
-              <li>Job Applications</li>
-            </ul>
-            <a href="#contact" class="btn btn-sm btn-outline">Ask Us →</a>
-          </article>
- 
-          <article class="service-card" aria-label="Student and Group discounts">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="service-icon" aria-hidden="true">🎓</div>
-            <h3 class="service-name">Student Discounts</h3>
-            <p class="service-desc">Special rates for students! Bring your student ID and enjoy discounted gaming and internet packages.</p>
-            <ul class="service-features" aria-label="Features">
-              <li>Student ID Required</li>
-              <li>Group Booking Discounts</li>
-              <li>Hourly & Package Plans</li>
-            </ul>
-            <a href="#contact" class="btn btn-sm btn-outline">Know More →</a>
-          </article>
- 
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== PRICING SECTION ========== -->
-    <section class="pricing section-pad" id="pricing" aria-labelledby="pricing-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">Transparent Rates</p>
-          <h2 class="section-title" id="pricing-heading">Simple <span class="accent-glow">Pricing</span></h2>
-          <p class="section-sub">No hidden charges. Pay only for what you use. Student discounts available.</p>
-        </div>
- 
-        <div class="pricing-grid">
- 
-          <article class="price-card" aria-label="Gaming PC pricing">
-            <div class="price-icon" aria-hidden="true">🖥️</div>
-            <h3 class="price-name">Gaming PC</h3>
-            <div class="price-amount">
-              <span class="price-currency">₹</span>
-              <span class="price-number">Ask Us</span>
-              <span class="price-per">/hr</span>
-            </div>
-            <ul class="price-features" aria-label="Included features">
-              <li>✓ High-Performance Rig</li>
-              <li>✓ All Popular Games</li>
-              <li>✓ Headset Included</li>
-              <li>✓ Mechanical Keyboard</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block">Book Now</a>
-          </article>
- 
-          <article class="price-card price-popular" aria-label="PS5 pricing — most popular">
-            <div class="popular-badge" aria-label="Most popular plan">⭐ Most Popular</div>
-            <div class="price-icon" aria-hidden="true">🎮</div>
-            <h3 class="price-name">PS5 Gaming</h3>
-            <div class="price-amount">
-              <span class="price-currency">₹</span>
-              <span class="price-number">Ask Us</span>
-              <span class="price-per">/hr</span>
-            </div>
-            <ul class="price-features" aria-label="Included features">
-              <li>✓ PlayStation 5 Console</li>
-              <li>✓ Big Screen Display</li>
-              <li>✓ Latest Game Library</li>
-              <li>✓ 2 Controllers</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary btn-block">Book Now</a>
-          </article>
- 
-          <article class="price-card" aria-label="Internet browsing pricing">
-            <div class="price-icon" aria-hidden="true">🌐</div>
-            <h3 class="price-name">Internet / Browsing</h3>
-            <div class="price-amount">
-              <span class="price-currency">₹</span>
-              <span class="price-number">Ask Us</span>
-              <span class="price-per">/hr</span>
-            </div>
-            <ul class="price-features" aria-label="Included features">
-              <li>✓ High-Speed Broadband</li>
-              <li>✓ Private Session</li>
-              <li>✓ Print/Scan Add-on Available</li>
-              <li>✓ Form Filling Support</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block">Book Now</a>
-          </article>
- 
-        </div>
- 
-        <div class="pricing-note" role="note">
-          <span class="note-icon" aria-hidden="true">💡</span>
-          <p>Prices vary based on packages and duration. <strong>Student discounts</strong> available with valid ID. Contact us or visit for current offers!</p>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== WHY CHOOSE US ========== -->
-    <section class="why-us section-pad" id="why-us" aria-labelledby="why-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">Why CityByteHub?</p>
-          <h2 class="section-title" id="why-heading">Sikar's <span class="accent-glow">Best</span> Gaming Zone</h2>
-          <p class="section-sub">We're not just another cyber cafe. We're a premium gaming experience built for serious players and everyday users.</p>
-        </div>
- 
-        <div class="why-grid">
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">⚡</div>
-            <h3>Blazing Fast Internet</h3>
-            <p>High-speed broadband ensures zero lag during gaming, downloads or video calls.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">❄️</div>
-            <h3>AC Comfort</h3>
-            <p>Fully air-conditioned space so you game in comfort even on the hottest Rajasthan days.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">🎯</div>
-            <h3>Pro Gaming Setup</h3>
-            <p>High-end PCs, mechanical keyboards, gaming mice, and high-refresh monitors for the ultimate experience.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">📍</div>
-            <h3>Prime Location</h3>
-            <p>Conveniently located on Piprali Road, Sikar — easy to reach from anywhere in the city.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">🤝</div>
-            <h3>Friendly Staff</h3>
-            <p>Our team includes a dedicated tech expert and support staff — always ready to help you.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon" aria-hidden="true">🎓</div>
-            <h3>Student Friendly</h3>
-            <p>Special discounts for students. We understand the student budget and cater to it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== ABOUT / OUR STORY ========== -->
-    <section class="about section-pad" id="about" aria-labelledby="about-heading">
-      <div class="container about-container">
-        <div class="about-visual" aria-hidden="true">
-          <div class="about-graphic">
-            <div class="ag-ring ag-ring-1"></div>
-            <div class="ag-ring ag-ring-2"></div>
-            <div class="ag-ring ag-ring-3"></div>
-            <div class="ag-core">CBH</div>
-          </div>
-        </div>
-        <div class="about-content">
-          <p class="section-tag">Our Story</p>
-          <h2 class="section-title" id="about-heading">Born in <span class="accent-glow">Sikar</span>, Built for Gamers</h2>
-          <p class="about-text">CityByteHub was founded by two passionate partners — one with deep technical expertise and the other handling operations — with a shared dream: to bring a truly premium gaming and internet experience to Sikar.</p>
-          <p class="about-text">Located on Piprali Road, we offer the best gaming hardware, fastest internet, and a welcoming environment for students, gamers, and professionals alike. Whether you're here to game, browse, print, or fill forms — we've got you covered.</p>
-          <div class="about-team">
-            <div class="team-card">
-              <div class="team-avatar" aria-hidden="true">👨‍💻</div>
-              <div class="team-info">
-                <h4>Technical Partner</h4>
-                <p>Hardware & Tech Support</p>
-              </div>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar" aria-hidden="true">👨‍💼</div>
-              <div class="team-info">
-                <h4>Operations Partner</h4>
-                <p>Customer Experience & Management</p>
-              </div>
-            </div>
-          </div>
-          <div class="about-hours">
-            <h4>⏰ Opening Hours</h4>
-            <p>Monday – Sunday: <strong>7:00 AM – 9:00 PM</strong></p>
-            <p>Open on Holidays: <strong>Yes!</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="testimonials section-pad" id="testimonials" aria-labelledby="test-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">What Gamers Say</p>
-          <h2 class="section-title" id="test-heading">Real <span class="accent-glow">Reviews</span></h2>
-        </div>
- 
-        <div class="testimonials-grid">
-          <article class="testimonial-card" aria-label="Review by Arjun S.">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="test-text">"Best gaming setup I've seen in Sikar. The PCs are super fast and the atmosphere is awesome. Totally worth it!"</p>
-            <div class="test-author">
-              <div class="author-avatar" aria-hidden="true">🧑</div>
-              <div>
-                <strong>Arjun S.</strong>
-                <span>Gamer, Sikar</span>
-              </div>
-            </div>
-          </article>
-          <article class="testimonial-card" aria-label="Review by Priya M.">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="test-text">"Came here for printing and ended up gaming for 2 hours! The staff is very helpful and the internet is super fast."</p>
-            <div class="test-author">
-              <div class="author-avatar" aria-hidden="true">👩</div>
-              <div>
-                <strong>Priya M.</strong>
-                <span>Student, Sikar</span>
-              </div>
-            </div>
-          </article>
-          <article class="testimonial-card" aria-label="Review by Rahul K.">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <p class="test-text">"PS5 gaming experience was insane. Played FIFA with my friends and it was the best evening. Will definitely come again!"</p>
-            <div class="test-author">
-              <div class="author-avatar" aria-hidden="true">🧑</div>
-              <div>
-                <strong>Rahul K.</strong>
-                <span>PS5 Gamer</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== FAQ SECTION ========== -->
-    <section class="faq section-pad" id="faq" aria-labelledby="faq-heading">
-      <div class="container faq-container">
-        <div class="section-header">
-          <p class="section-tag">Common Questions</p>
-          <h2 class="section-title" id="faq-heading">FAQ</h2>
-        </div>
- 
-        <div class="faq-list" role="list">
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
-              <span>What are your opening hours?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq1" hidden>
-              <p>We are open every day — Monday to Sunday — from <strong>7:00 AM to 9:00 PM</strong>, including holidays. Come anytime that suits you!</p>
-            </div>
-          </div>
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
-              <span>Where exactly is CityByteHub located?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq2" hidden>
-              <p>We are located on <strong>Piprali Road, Sikar, Rajasthan</strong>. You can find us on Google Maps — just search "CityByteHub Sikar".</p>
-            </div>
-          </div>
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
-              <span>Do you offer student discounts?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq3" hidden>
-              <p>Yes! We have special student-friendly pricing. Bring your valid student ID and ask our staff for the current student discount offer.</p>
-            </div>
-          </div>
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
-              <span>Can I book a slot in advance?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq4" hidden>
-              <p>Yes! You can contact us via the form below, call us directly, or drop a message on WhatsApp to pre-book a slot — especially useful for PS5 gaming.</p>
-            </div>
-          </div>
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
-              <span>What printing services do you offer?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq5" hidden>
-              <p>We offer black & white printing, color printing, photocopying, and document scanning. Perfect for students and professionals. Ask us for current rates per page.</p>
-            </div>
-          </div>
- 
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq6">
-              <span>Do you help with online form filling?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer" id="faq6" hidden>
-              <p>Absolutely! We assist with government portal registrations, college admissions, job applications, and all kinds of online form submissions. Our staff will guide you step-by-step.</p>
-            </div>
-          </div>
- 
-        </div>
-      </div>
-    </section>
- 
-    <!-- ========== CONTACT SECTION ========== -->
-    <section class="contact section-pad" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-tag">Get In Touch</p>
-          <h2 class="section-title" id="contact-heading">Visit or <span class="accent-glow">Contact Us</span></h2>
-          <p class="section-sub">Have a question, want to book a session, or just drop by? We'd love to hear from you!</p>
-        </div>
- 
-        <div class="contact-grid">
- 
-          <!-- Contact Info -->
-          <div class="contact-info">
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">📍</div>
-              <div>
-                <h4>Location</h4>
-                <p>Piprali Road, Sikar, Rajasthan</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">📧</div>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:citybytehub@gmail.com">citybytehub@gmail.com</a>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon" aria-hidden="true">⏰</div>
-              <div>
-                <h4>Timings</h4>
-                <p>Mon – Sun: 7:00 AM – 9:00 PM</p>
-              </div>
-            </div>
- 
-            <!-- WhatsApp CTA -->
-            <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20CityByteHub%2C%20I%20want%20to%20book%20a%20session!" 
-               class="btn btn-whatsapp" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Chat on WhatsApp">
-              <span aria-hidden="true">💬</span> Chat on WhatsApp
-            </a>
- 
-            <!-- Google Maps placeholder -->
-            <div class="map-placeholder" role="img" aria-label="Map location of CityByteHub on Piprali Road Sikar">
-              <div class="map-inner">
-                <div class="map-pin" aria-hidden="true">📍</div>
-                <p>CityByteHub</p>
-                <p class="map-addr">Piprali Road, Sikar</p>
-                <a href="https://maps.google.com/?q=CityByteHub+Sikar+Piprali+Road" 
-                   class="btn btn-sm btn-outline" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   aria-label="Open in Google Maps">
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
-          </div>
- 
-          <!-- Contact Form -->
-          <div class="contact-form-wrap">
-            <form class="contact-form" id="contact-form" novalidate aria-label="Contact and booking form">
-              <h3 class="form-title">Book a Session / Enquire</h3>
- 
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" autocomplete="name" aria-required="true" />
-                <span class="field-error" id="name-error" role="alert" aria-live="polite"></span>
-              </div>
- 
-              <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required pattern="[6-9][0-9]{9}" autocomplete="tel" aria-required="true" />
-                <span class="field-error" id="phone-error" role="alert" aria-live="polite"></span>
-              </div>
- 
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
-                <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
-              </div>
- 
-              <div class="form-group">
-                <label for="service">Service Interested In *</label>
-                <select id="service" name="service" required aria-required="true">
-                  <option value="">-- Select a Service --</option>
-                  <option value="gaming-pc">Gaming PC</option>
-                  <option value="ps5">PS5 Gaming</option>
-                  <option value="internet">Internet / Browsing</option>
-                  <option value="printing">Printing & Scanning</option>
-                  <option value="form-filling">Online Form Filling</option>
-                  <option value="other">Other</option>
-                </select>
-                <span class="field-error" id="service-error" role="alert" aria-live="polite"></span>
-              </div>
- 
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Any specific requirements or questions?" rows="4" aria-label="Message"></textarea>
-              </div>
- 
-              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-                <span class="btn-text">Send Enquiry</span>
-                <span class="btn-loading" hidden aria-hidden="true">Sending...</span>
-              </button>
- 
-              <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
-                ✅ Thanks! We'll get back to you soon. Or visit us at Piprali Road, Sikar!
-              </div>
- 
-              <!-- WARNING: Also validate all inputs on backend/server — never trust frontend validation alone -->
-            </form>
-          </div>
- 
-        </div>
-      </div>
-    </section>
- 
-  </main>
- 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo footer-logo" aria-label="CityByteHub home">
-          <span class="logo-icon" aria-hidden="true">⬡</span>
-          <span class="logo-text">City<span class="logo-accent">Byte</span>Hub</span>
-        </a>
-        <p class="footer-tagline">Sikar's Premium Gaming Zone & Cyber Cafe on Piprali Road.</p>
-        <p class="footer-hours">🕐 Open Daily: 7:00 AM – 9:00 PM</p>
-      </div>
- 
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul role="list">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
- 
-      <div class="footer-services">
-        <h4>Services</h4>
-        <ul role="list">
-          <li>Gaming PCs</li>
-          <li>PS5 / Console Gaming</li>
-          <li>High-Speed Internet</li>
-          <li>Printing & Scanning</li>
-          <li>Online Form Filling</li>
-          <li>Student Discounts</li>
-        </ul>
-      </div>
- 
-      <div class="footer-contact">
-        <h4>Contact</h4>
-        <p>📍 Piprali Road, Sikar, Rajasthan</p>
-        <p>📧 <a href="mailto:citybytehub@gmail.com">citybytehub@gmail.com</a></p>
-        <p>🕐 7:00 AM – 9:00 PM Daily</p>
-        <div class="social-links" aria-label="Social media links">
-          <!-- Replace # with actual social URLs when available -->
-          <a href="#" class="social-btn" aria-label="Instagram" rel="noopener noreferrer" target="_blank">📸</a>
-          <a href="#" class="social-btn" aria-label="Facebook" rel="noopener noreferrer" target="_blank">📘</a>
-          <a href="#" class="social-btn" aria-label="YouTube" rel="noopener noreferrer" target="_blank">▶️</a>
-        </div>
-      </div>
-    </div>
- 
-    <div class="footer-bottom">
-      <p>© 2025 CityByteHub, Sikar. All rights reserved. | Best Gaming Zone in Sikar | Cyber Cafe Piprali Road</p>
-      <div class="footer-legal">
-        <a href="#privacy">Privacy Policy</a>
-        <span aria-hidden="true">•</span>
-        <a href="#terms">Terms & Conditions</a>
-      </div>
-    </div>
-  </footer>
- 
-  <!-- ========== FLOATING BUTTONS ========== -->
-  <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20CityByteHub%2C%20I%20want%20to%20book%20a%20session!" 
-     class="float-whatsapp" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     aria-label="Chat with us on WhatsApp">
-    💬
-  </a>
- 
-  <!-- Sticky Book Now (Mobile) -->
-  <a href="#contact" class="float-book-btn" aria-label="Book a seat now">
-    🎮 Book a Seat
-  </a>
- 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-</body>
-</html>
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-nav);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 999;
+  }
+  
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--accent-blue);
+    border-radius: 3px;
+    transition: all var(--transition);
+    box-shadow: 0 0 10px var(--accent-blue);
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-ctas {
+    justify-content: center;
+  }
+  
+  .hero-trust {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid,
+  .pricing-grid,
+  .why-grid,
+  .testimonials-grid,
+  .tournament-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .student-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .print-rates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section-pad {
+    padding: 3rem 0;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .float-book-btn {
+    display: block;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+  }
+  
+  .stats-container {
+    gap: 1rem;
+  }
+  
+  .stat-divider {
+    display: none;
+  }
+  
+  .print-rates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .price-card.price-popular {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .contact-form-wrap {
+    padding: 1.5rem;
+  }
+  
+  .tourn-card {
+    flex-direction: column;
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-pad {
+  padding: 5rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
